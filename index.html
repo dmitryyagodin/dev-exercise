@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Names app for dev-academy-2021</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
@@ -16,116 +17,30 @@
     <main>
         <form action="">
             <p>Search and filter the names</p>
-            <input type="text" name="search">
-            <input id="b-search" type="submit" name="search" value="SEARCH" onClick="getName()">
+            <input type="text" name="search" placeholder="Enter name">
+            <button id="b-search" type="submit" name="search" onClick="getName()"><i class="fa fa-search"></i></button>
             <select name="query" id="table-view" onchange="tableViewChange();">
                 <option value="order-by-count">Order by count</option>
                 <option value="order-by-name">Order by name</option>
-                <option value="total">Total</option>
             </select>
         <table id="table">
             <thead>
                 <tr>
-                    <th onclick="sortColumn('name')">NAME</th>
-                    <th onclick="sortColumn('amount')">COUNT</th>
+                    <th onclick="sortColumn('name')">NAME <i class="fas fa-sort"></i></th>
+                    <th onclick="sortColumn('amount')">COUNT <i class="fas fa-sort"></i></th>
                 </tr>
             </thead>
             <tbody id="namesData"></tbody>
+            <tfoot id="table-footer"></tfoot>
         </table>
         
         </form>
+        
     </main>
     <footer>
 
     </footer>
-    <script>
-        function tableViewChange() {
-            let tableView = document.getElementById("table-view").value;
-            switch(tableView) {
-                case "order-by-name":
-                sortColumn('name');
-                break;
-                case "order-by-count":
-                sortColumn('amount');
-                break;
-            }
-            
-
-        }
-        
-        let sortDirection = false;
-        let namesData = [
-            { "names": [
-                { "name": "Ville", "amount": 24 },
-                { "name": "Anna", "amount": 6 },
-                { "name": "Antti", "amount": 22 },
-                { "name": "Sanna", "amount": 5 },
-                { "name": "Mikko", "amount": 19 },
-                { "name": "Minna", "amount": 5 },
-                { "name": "Timo", "amount": 18 },
-                { "name": "Satu", "amount": 5 },
-                { "name": "Tuomas", "amount": 16 },
-                { "name": "Tiina", "amount": 5 },
-                { "name": "Tero", "amount": 15 },
-                { "name": "Kati", "amount": 5 },
-                { "name": "Sami", "amount": 15 },
-                { "name": "Henna", "amount": 4 },
-                { "name": "Mika", "amount": 12 },
-                { "name": "Liisa", "amount": 4 },
-                { "name": "Janne", "amount": 12 },
-                { "name": "Paula", "amount": 4 },
-                { "name": "Petri", "amount": 11 },
-                { "name": "Suvi", "amount": 4 }
-                ]
-            }
-        ];
-        
-        window.onload = () => {
-            loadTableData(namesData);
-        };
-
-        // the following functionality was borrowed and further developed from Dylan Israel's tutorial (see: https://youtu.be/ri5Nqe_IK50)
-
-        function loadTableData(namesData) {
-            const tableBody = document.getElementById("namesData");
-            let dataHtml = "";
-            for (let person of namesData[0].names) {
-                dataHtml += `<tr><td>${person.name}</td><td>${person.amount}</td></tr>`;
-            }
-            tableBody.innerHTML = dataHtml;
-        }
-
-        function sortColumn(columnName) {
-            const dataType = typeof namesData[0].names[0][columnName];
-            sortDirection = !sortDirection;
-
-            switch(dataType) {
-            case 'number':
-            sortNumberColumn(sortDirection, columnName);
-            break;
-            case 'string':
-            sortStringColumn(sortDirection, columnName);
-            break;
-            } 
-            
-            loadTableData(namesData);
-        }
-        
-        function sortNumberColumn(sortDirection, columnName) {
-            console.log(sortDirection);
-            namesData[0].names = namesData[0].names.sort((n1, n2) => {
-                return sortDirection ? n1[columnName] - n2[columnName] : n2[columnName] - n1[columnName]
-            });
-        }
-        // I had to come up with sortStringColumn myself 
-        function sortStringColumn(sort, columnName) {
-            console.log(sortDirection)
-            namesData[0].names = namesData[0].names.sort((n1, n2) => {
-                return sortDirection && (n1[columnName] > n2[columnName]) ? 1 : -1
-            });
-        }
-
-    </script>
+    <script src="./scripts/script.js"></script>
 </body>
 
     </script>

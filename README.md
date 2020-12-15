@@ -34,9 +34,15 @@ Progress log
 2.2 Added sorting by name by clicking on the column head
 2.3 Added 2.1 and 2.2 functionality to an optional dropdown box
 3.1 Added CSS styling to the table
-
+4.1 Added the sorting icons (asc/desc) to the column heads
+4.2 Added the search icon to the search button
+5.1 Added the table footer element and placed the total results row there
+6.1 Created scripts folder and have placed the script part there as a separate file
 
 Backlog
 - add search by name functionality
-- add a feature to retrieve the total results row
-
+- plan out the footer
+- add the footer
+- format README.md
+- improve navigation (Back to the top) [Takaisin sivun alkuun /\]
+- add the project to the github pages

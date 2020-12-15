@@ -50,7 +50,7 @@ tr:nth-child(even) {
     background-color: rgb(148, 161, 154);
 }
 
-th {
+th, tfoot {
     background-color: rgb(42, 87, 61);
     color: seashell;
 }
