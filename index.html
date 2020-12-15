@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names app for dev-academy-2021</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Names in the company</h1>
+        </div>
+
+    </header>
+    <main>
+        <form action="">
+            <p>Search and filter the names</p>
+            <input type="text" name="search">
+            <input id="b-search" type="submit" name="search" value="SEARCH" onClick="newRow()">
+            
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>Cell 3</td>
+                <td>Cell 4</td>
+            </tr>
+        </table>
+        
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function newRow() {
+            let table = document.getElementById("table");
+            let row = document.createElement("tr");
+            let text = document.createTextNode("Sample text");
+            table.appendChild(row.appendChild(text));
+        }
+        
+
+
+    </script>
+</body>
+</html>
