@@ -25,24 +25,34 @@ Progress log
 1.1 Started the project
 1.2 Marked up the main elements
 1.3 Introduced responsive elements (flex)
-2.1 Searched for apropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
+1.4 Searched for apropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
 
 15.12.2020
 
-1.1 Added data load to the table.
-2.1. Added sorting by count by clicking on the column head
-2.2 Added sorting by name by clicking on the column head
-2.3 Added 2.1 and 2.2 functionality to an optional dropdown box
-3.1 Added CSS styling to the table
-4.1 Added the sorting icons (asc/desc) to the column heads
-4.2 Added the search icon to the search button
-5.1 Added the table footer element and placed the total results row there
-6.1 Created scripts folder and have placed the script part there as a separate file
+2.1 Added data load to the table.
+2.2. Added sorting by count by clicking on the column head
+2.3 Added sorting by name by clicking on the column head
+2.4 Added 2.1 and 2.2 functionality to an optional dropdown box (removed in 3.2)
+2.5 Added CSS styling to the table (temporary)
+2.6 Added the sorting icons (asc/desc) to the column heads
+2.7 Added the search icon to the search button (removed in 3.2)
+2.8 Added the table footer element and placed the total results row there
+2.9 Created scripts folder and have placed the script part there as a separate file
+2.10 Added the project to the github pages
+
+16.12.2020
+3.1 Added filterName function to filter table rows based on the input
+3.2 Removed the search button and the dropdown box as redundant
+3.3 Added radio buttons to switch from a default table view to a bar chart view
+3.4 Placed all tools into a fieldset
+3.5 Added "back to the top" element
+3.6.1 Applied new fonts, shadow styling to the main elements, table borders off
+3.6.2 Removed the legend element from the fieldset
+3.7 - fix or move filter input that matches substrings => made case sensitive filtering
 
 Backlog
-- add search by name functionality
 - plan out the footer
 - add the footer
 - format README.md
-- improve navigation (Back to the top) [Takaisin sivun alkuun /\]
-- add the project to the github pages
+- keep the filtered rows for sorting functions
+- radio buttons for male and female

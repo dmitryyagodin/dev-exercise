@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Names app for dev-academy-2021</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <header>
+    <header name="top">
         <div>
             <h1>Names in the company</h1>
         </div>
 
     </header>
     <main>
-        <form action="">
-            <p>Search and filter the names</p>
-            <input type="text" name="search" placeholder="Enter name">
-            <button id="b-search" type="submit" name="search" onClick="getName()"><i class="fa fa-search"></i></button>
-            <select name="query" id="table-view" onchange="tableViewChange();">
-                <option value="order-by-count">Order by count</option>
-                <option value="order-by-name">Order by name</option>
-            </select>
+        <form action="" autocomplete="off">
+            <fieldset id="tools-flex-box">
+                <div id="search-input-div" class="input-element">
+                    <input id="search-input" type="search" name="search" placeholder="Filter names" onkeyup="filterName()">
+                </div>
+                <div class="input-element">
+                    <input id="table-view" type="radio" name="view" value="table" checked="checked">
+                    <label for="table-view">Table view</label>
+                </div>
+                <div class="input-element">
+                    <input id="bar-chart-view" type="radio" name="view" value="bar-chart">
+                    <label for="bar-chart-view">Bar chart view</label>
+                </div>
+            </fieldset>
+        </form>
         <table id="table">
             <thead>
                 <tr>
@@ -34,15 +43,16 @@
             <tfoot id="table-footer"></tfoot>
         </table>
         
-        </form>
-        
     </main>
     <footer>
+        <div id="back-to-top">
+            <a href="#top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+
+        </div>
 
     </footer>
     <script src="./scripts/script.js"></script>
-</body>
-
-    </script>
 </body>
 </html>

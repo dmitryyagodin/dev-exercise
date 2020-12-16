@@ -82,16 +82,29 @@ function sortNumberColumn(sortDirection, columnName) {
     });
 }
 // I had to come up with sortStringColumn myself 
-function sortStringColumn(sort, columnName) {
+function sortStringColumn(sortDirection, columnName) {
     namesData[0].names = namesData[0].names.sort((n1, n2) => {
         return sortDirection && (n1[columnName] > n2[columnName]) ? 1 : -1
     });
 }
 
-//// Moved this function into load table data
-// function totalCount() {
-//     const totalRow = document.getElementById("table-footer");
-//     let data = namesData[0].names;
-//     let nameCount = data.reduce((acc, cur) => acc + cur.amount, 0);
-//     totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;
-// }
+// filters table rows following user input and updates the total row
+function filterName() {
+    const tableBody = document.getElementById("namesData");
+    const totalRow = document.getElementById("table-footer");
+    let searchQuery = document.getElementById("search-input").value; // .value.toLowerCase() would make filtering case insesitive
+    let data = namesData[0].names;
+    let dataHtml = "";
+    let nameCount = 0;
+    for (let item in data) {
+        // .name.toLowerCase().includes would make filtering case insesitive
+        if (data[item].name.includes(searchQuery)) {
+            dataHtml += `<tr><td>${data[item].name}</td><td>${data[item].amount}</td></tr>`;
+            nameCount += data[item].amount;
+        }
+    }
+    tableBody.innerHTML = dataHtml;
+         
+    totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;
+    
+}
