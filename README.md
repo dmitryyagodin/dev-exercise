@@ -1,4 +1,4 @@
-This is an exercise project inspired by this [Solita task](https://github.com/solita/dev-academy-2021).
+This is an exercise project inspired by this [Solita task](https://github.com/solita/dev-academy-2021):
 
 
 > Your task is to implement a name application. The application should have an user interface. The user interface can be either a web application or an api. (It can even contain both if you have enough time and enthusiasm.)
@@ -62,6 +62,5 @@ This is an exercise project inspired by this [Solita task](https://github.com/so
 - 4.6.2 Got rid of the external icons that were used to display sorting states
 
 ### Backlog
-- format README.md
 - keep the filtered rows for sorting functions
 - add input validation (only characters?)
