@@ -1,19 +1,7 @@
 "use strict";
-
-function tableViewChange() {
-    let tableView = document.getElementById("table-view").value;
-    switch(tableView) {
-        case "order-by-name":
-            sortColumn('name');
-            break;
-        case "order-by-count":
-            sortColumn('amount');
-            break;
-    }
-}
-
-let sortDirection = false;
-let namesData = [
+const tableBody = document.getElementById("namesData");
+const totalRow = document.getElementById("table-footer");
+const namesData = [
     { "names": [
         { "name": "Ville", "amount": 24 },
         { "name": "Anna", "amount": 6 },
@@ -40,71 +28,58 @@ let namesData = [
 ];
 
 window.onload = () => {
-    loadTableData(namesData);
+    loadTableData(data);
 };
 
-// the following functionality was borrowed and further developed from Dylan Israel's tutorial (see: https://youtu.be/ri5Nqe_IK50)
+let data = namesData[0].names;
+let sortDirection = false;
 
-function loadTableData(namesData) {
-    const tableBody = document.getElementById("namesData");
+function loadTableData() {
     let dataHtml = "";
-    for (let person of namesData[0].names) {
-        dataHtml += `<tr><td>${person.name}</td><td>${person.amount}</td></tr>`;
-    }
-
-    tableBody.innerHTML = dataHtml;
-    const totalRow = document.getElementById("table-footer");
-    let data = namesData[0].names;
     let nameCount = data.reduce((acc, cur) => acc + cur.amount, 0);
-    
+    for (let item of data) {
+        dataHtml += `<tr><td>${item.name}</td><td>${item.amount}</td></tr>`;
+    }
+    tableBody.innerHTML = dataHtml;
     totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;
 }
 
-function sortColumn(columnName) {
-    const dataType = typeof namesData[0].names[0][columnName];
-    sortDirection = !sortDirection;
 
+function sortColumn(columnName) {
+    const dataType = typeof data[0][columnName];
+    sortDirection = !sortDirection;
     switch(dataType) {
     case 'number':
-    sortNumberColumn(sortDirection, columnName);
+        document.getElementById('amount').setAttribute("class", "th-sort-asc-" + sortDirection);
+        document.getElementById('name').setAttribute("class", "th-unsorted");
+        data = data.sort((a, b) => {
+            return sortDirection ? a[columnName] - b[columnName] : b[columnName] - a[columnName]
+        });
     break;
     case 'string':
-    sortStringColumn(sortDirection, columnName);
+        document.getElementById('name').setAttribute("class", "th-sort-asc-" + sortDirection);
+        document.getElementById('amount').setAttribute("class", "th-unsorted");
+        data = data.sort((a, b) => {
+            return sortDirection && (a[columnName] > b[columnName]) ? 1 : -1
+        });
     break;
     } 
     
-    loadTableData(namesData);
-}
-
-function sortNumberColumn(sortDirection, columnName) {
-    namesData[0].names = namesData[0].names.sort((n1, n2) => {
-        return sortDirection ? n1[columnName] - n2[columnName] : n2[columnName] - n1[columnName]
-    });
-}
-// I had to come up with sortStringColumn myself 
-function sortStringColumn(sortDirection, columnName) {
-    namesData[0].names = namesData[0].names.sort((n1, n2) => {
-        return sortDirection && (n1[columnName] > n2[columnName]) ? 1 : -1
-    });
+    loadTableData(data);
 }
 
 // filters table rows following user input and updates the total row
 function filterName() {
-    const tableBody = document.getElementById("namesData");
-    const totalRow = document.getElementById("table-footer");
-    let searchQuery = document.getElementById("search-input").value; // .value.toLowerCase() would make filtering case insesitive
-    let data = namesData[0].names;
+    
+    let searchQuery = document.getElementById("search-input").value;
     let dataHtml = "";
     let nameCount = 0;
     for (let item in data) {
-        // .name.toLowerCase().includes would make filtering case insesitive
         if (data[item].name.includes(searchQuery)) {
             dataHtml += `<tr><td>${data[item].name}</td><td>${data[item].amount}</td></tr>`;
             nameCount += data[item].amount;
         }
     }
     tableBody.innerHTML = dataHtml;
-         
-    totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;
-    
+    totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;    
 }
