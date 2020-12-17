@@ -17,16 +17,14 @@
     <main>
         <form action="" autocomplete="off">
             <fieldset>
-                <input id="search-input" class="input-element" type="search" name="search" placeholder="Filter names" onkeyup="filterName()">  
+                <input id="search-input" type="search" placeholder="Filter names" onkeyup="filterName()">  
             </fieldset>
         </form>
         <table id="table">
             <thead>
                 <tr>
-                    <th id="name" class="th-unsorted" onclick="sortColumn('name')">NAME
-                    </th>
-                    <th id="amount" class="th-unsorted" onclick="sortColumn('amount')">COUNT
-                    </th>
+                    <th id="name" class="th-unsorted" onclick="sortColumn('name')">NAME</th>
+                    <th id="amount" class="th-unsorted" onclick="sortColumn('amount')">COUNT</th>
                 </tr>
             </thead>
             <tbody id="namesData"></tbody>

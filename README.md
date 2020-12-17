@@ -60,7 +60,4 @@ This is an exercise project inspired by this [Solita task](https://github.com/so
 - 4.5 Reformatted script.js
 - 4.6.1 Added up- and down-pointing triangles to define sorting states
 - 4.6.2 Got rid of the external icons that were used to display sorting states
-
-### Backlog
-- keep the filtered rows for sorting functions
-- add input validation (only characters?)
+- 4.6.3 Adjusted sorting icons
