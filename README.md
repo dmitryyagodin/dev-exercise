@@ -1,4 +1,5 @@
-https://github.com/solita/dev-academy-2021
+This is an exercise project inspired by this [task](https://github.com/solita/dev-academy-2021):
+
 
 Your task is to implement a name application. The application should have an user interface. The user interface can be either a web application or an api. (It can even contain both if you have enough time and enthusiasm.)
 
@@ -18,16 +19,16 @@ GitHub is a good choice for version control. You can attach the repository link 
 Be prepared to present your implementation of the name application in the possible interview. We would like to see how the application works and discuss together the technology choices you’ve made.
 
 
-Progress log
+## Progress log
 
-14.12.2020
+### 14.12.2020
 
-1.1 Started the project
-1.2 Marked up the main elements
-1.3 Introduced responsive elements (flex)
-1.4 Searched for apropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
+- 1.1 Started the project
+- 1.2 Marked up the main elements
+- 1.3 Introduced responsive elements (flex)
+- 1.4 Searched for apropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
 
-## 15.12.2020
+### 15.12.2020
 
 - 2.1 Added data load to the table.
 - 2.2. Added sorting by count by clicking on the column head
@@ -40,27 +41,27 @@ Progress log
 - 2.9 Created scripts folder and have placed the script part there as a separate file
 - 2.10 Added the project to the github pages
 
-## 16.12.2020
-3.1 Added filterName function to filter table rows based on the input
-3.2 Removed the search button and the dropdown box as redundant
-3.3 Added radio buttons to switch from a default table view to a bar chart view
-3.4 Placed all tools into a fieldset
-3.5 Added "back to the top" element
-3.6.1 Applied new fonts, shadow styling to the main elements, table borders off
-3.6.2 Removed the legend element from the fieldset
-3.7 - fix or move filter input that matches substrings => made case sensitive filtering
-3.7.1 resized filter input to match the size of the rows
+### 16.12.2020
+- 3.1 Added filterName function to filter table rows based on the input
+- 3.2 Removed the search button and the dropdown box as redundant
+- 3.3 Added radio buttons to switch from a default table view to a bar chart view
+- 3.4 Placed all tools into a fieldset
+- 3.5 Added "back to the top" element
+- 3.6.1 Applied new fonts, shadow styling to the main elements, table borders off
+- 3.6.2 Removed the legend element from the fieldset
+- 3.7 - fix or move filter input that matches substrings => made case sensitive filtering
+- 3.7.1 resized filter input to match the size of the rows
 
-## 17.12.2020
-4.1 Got rid of the radio buttons - excessive gold plating
-4.2 Removed display flex - not neccessary for one table view
-4.3 Added footer
-4.4 Removed back-to-top arrow navigation as redundant for a short page
-4.5 Reformatted script.js
-4.6.1 Added up- and down-pointing triangles to define sorting states
-4.6.2 Got rid of the external icons that were used to display sorting states
+### 17.12.2020
+- 4.1 Got rid of the radio buttons - excessive gold plating
+- 4.2 Removed display flex - not neccessary for one table view
+- 4.3 Added footer
+- 4.4 Removed back-to-top arrow navigation as redundant for a short page
+- 4.5 Reformatted script.js
+- 4.6.1 Added up- and down-pointing triangles to define sorting states
+- 4.6.2 Got rid of the external icons that were used to display sorting states
 
-Backlog
+### Backlog
 - format README.md
 - keep the filtered rows for sorting functions
 - add input validation (only characters?)
