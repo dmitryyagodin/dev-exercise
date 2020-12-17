@@ -29,16 +29,16 @@ Progress log
 
 ## 15.12.2020
 
-2.1 Added data load to the table.
-2.2. Added sorting by count by clicking on the column head
-2.3 Added sorting by name by clicking on the column head
-2.4 Added 2.1 and 2.2 functionality to an optional dropdown box (removed in 3.2)
-2.5 Added CSS styling to the table (temporary)
-2.6 Added the sorting icons (asc/desc) to the column heads
-2.7 Added the search icon to the search button (removed in 3.2)
-2.8 Added the table footer element and placed the total results row there
-2.9 Created scripts folder and have placed the script part there as a separate file
-2.10 Added the project to the github pages
+- 2.1 Added data load to the table.
+- 2.2. Added sorting by count by clicking on the column head
+- 2.3 Added sorting by name by clicking on the column head
+- 2.4 Added 2.1 and 2.2 functionality to an optional dropdown box (removed in 3.2)
+- 2.5 Added CSS styling to the table (temporary)
+- 2.6 Added the sorting icons (asc/desc) to the column heads
+- 2.7 Added the search icon to the search button (removed in 3.2)
+- 2.8 Added the table footer element and placed the total results row there
+- 2.9 Created scripts folder and have placed the script part there as a separate file
+- 2.10 Added the project to the github pages
 
 ## 16.12.2020
 3.1 Added filterName function to filter table rows based on the input
