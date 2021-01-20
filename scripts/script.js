@@ -34,6 +34,7 @@ window.onload = () => {
 let data = namesData[0].names;
 let sortDirection = false;
 
+// loads data into the table body, calculates the total row number and loads this row 
 function loadTableData() {
     let dataHtml = "";
     let nameCount = data.reduce((acc, cur) => acc + cur.amount, 0);
@@ -44,7 +45,7 @@ function loadTableData() {
     totalRow.innerHTML = `<tr><td>Total</td><td>${nameCount}</td></tr>`;
 }
 
-
+// sorts the columns when clicked and changes the sort styling 
 function sortColumn(columnName) {
     const dataType = typeof data[0][columnName];
     sortDirection = !sortDirection;
