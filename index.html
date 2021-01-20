@@ -33,9 +33,13 @@
     </main>
     <footer>
         <div id="footer-info">
-            © 2020 Dmitry Yagodin
+            &copy; <span class="copyright"></span> Dmitry Yagodin
         </div>
     </footer>
+    <script>
+      let yearNow = new Date().getFullYear();
+      document.querySelector(".copyright").innerHTML = yearNow
+    </script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
