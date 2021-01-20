@@ -28,7 +28,7 @@ The bottom row of the table represents the total counts of all the names and dyn
 - 1.1 Started the project
 - 1.2 Marked up the main elements
 - 1.3 Introduced responsive elements (flex)
-- 1.4 Searched for apropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
+- 1.4 Searched for appropriate solutions and found this tutorial by Dylan Israel useful (see: https://youtu.be/ri5Nqe_IK50)
 
 ### 15.12.2020
 
@@ -56,10 +56,13 @@ The bottom row of the table represents the total counts of all the names and dyn
 
 ### 17.12.2020
 - 4.1 Got rid of the radio buttons - excessive gold plating
-- 4.2 Removed display flex - not neccessary for one table view
+- 4.2 Removed display flex - not necessary for one table view
 - 4.3 Added footer
 - 4.4 Removed back-to-top arrow navigation as redundant for a short page
 - 4.5 Reformatted script.js
 - 4.6.1 Added up- and down-pointing triangles to define sorting states
 - 4.6.2 Got rid of the external icons that were used to display sorting states
 - 4.6.3 Adjusted sorting icons
+
+### 20.01.2020
+- 5.1 Added automatic update of the copyright year info
